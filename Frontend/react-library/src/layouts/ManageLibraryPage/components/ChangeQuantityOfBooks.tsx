@@ -86,17 +86,17 @@ export const ChangeQuantityOfBooks = () => {
             {totalAmountOfBooks > 0 ?
                 <>
                     <div className='mt-3'>
-                        <h3>Number of results: ({totalAmountOfBooks})</h3>
+                        <h3>Số kết quả: ({totalAmountOfBooks})</h3>
                     </div>
                     <p>
-                        {indexOfFirstBook + 1} to {lastItem} of {totalAmountOfBooks} items: 
+                        {indexOfFirstBook + 1} đến {lastItem} trong {totalAmountOfBooks} mục: 
                     </p>
                     {books.map(book => (
                        <ChangeQuantityOfBook book={book} key={book.id} deleteBook={deleteBook}/>
                     ))}
                 </>
                 :
-                <h5>Add a book before changing quantity</h5>
+                <h5>Thêm sách trước khi thay đổi số lượng</h5>
             }
             {totalPages > 1 && <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate}/>}
         </div>

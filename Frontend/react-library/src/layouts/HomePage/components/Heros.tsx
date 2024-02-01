@@ -14,17 +14,17 @@ export const Heros = () => {
                     </div>
                     <div className='col-4 col-md-4 container d-flex justify-content-center align-items-center'>
                         <div className='ml-2'>
-                            <h1>What have you been reading?</h1>
+                            <h1>Bạn đã đọc những gì?</h1>
                             <p className='lead'>
-                                The library team would love to know what you have been reading.
-                                Whether it is to learn a new skill or grow within one,
-                                we will be able to provide the top content for you!
+                                Nhóm thư viện rất muốn biết bạn đã đọc gì. 
+                                Cho dù đó là để học một kỹ năng mới hay phát triển một kỹ năng mới, 
+                                chúng tôi đều có thể cung cấp nội dung hàng đầu cho bạn!
                             </p>
                             {authState?.isAuthenticated ? 
                                 <Link type='button' className='btn main-color btn-lg text-white'
-                                    to='search'>Explore top books </Link>
+                                    to='search'>Khám phá những cuốn sách hàng đầu</Link>
                                 :
-                                <Link className='btn main-color btn-lg text-white' to='/login'>Sign up</Link>
+                                <Link className='btn main-color btn-lg text-white' to='/login'>Đăng nhập</Link>
                             }  
                         </div>
                     </div>
@@ -33,13 +33,12 @@ export const Heros = () => {
                     <div className='col-4 col-md-4 container d-flex 
                         justify-content-center align-items-center'>
                         <div className='ml-2'>
-                            <h1>Our collection is always changing!</h1>
+                            <h1>Bộ sưu tập của chúng tôi luôn thay đổi!</h1>
                             <p className='lead'>
-                                Try to check in daily as our collection is always changing! 
-                                We work nonstop to provide the most accurate book selection possible 
-                                for our Luv 2 Read students! We are diligent about our book selection 
-                                and our books are always going to be our 
-                                top priority.
+                                Hãy cố gắng kiểm tra hàng ngày vì bộ sưu tập của chúng tôi luôn thay đổi! 
+                                Chúng tôi làm việc không ngừng nghỉ để cung cấp lựa chọn sách chính xác nhất có thể 
+                                cho học sinh Luv 2 Read của chúng tôi! Chúng tôi rất siêng năng trong việc lựa chọn sách của mình 
+                                và sách của chúng tôi luôn là ưu tiên hàng đầu của chúng tôi.
                             </p>
                         </div>
                     </div>
@@ -63,9 +62,9 @@ export const Heros = () => {
                             </p>
                             {authState?.isAuthenticated ? 
                                 <Link type='button' className='btn main-color btn-lg text-white'
-                                    to='search'>Explore top books</Link>
+                                    to='search'>Khám phá những cuốn sách hàng đầu</Link>
                                 :
-                                <Link className='btn main-color btn-lg text-white' to='/login'>Sign up</Link>
+                                <Link className='btn main-color btn-lg text-white' to='/login'>Đăng nhập</Link>
                         }
                         </div>
                     </div>

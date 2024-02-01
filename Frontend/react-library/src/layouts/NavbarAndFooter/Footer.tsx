@@ -9,12 +9,12 @@ export const Footer = () => {
                 <ul className='nav navbar-dark col-md-4 justify-content-end'>
                     <li className='nav-item'>
                         <Link to='/home' className='nav-link px-2 text-white'>
-                            Home
+                            Trang chủ
                         </Link>
                     </li>
                     <li className='nav-item'>
                         <Link to='/search' className='nav-link px-2 text-white'>
-                            Search Books
+                            Tìm kiếm sách
                         </Link>
                     </li>
                 </ul>

@@ -99,19 +99,19 @@ export const ChangeQuantityOfBook: React.FC<{ book: BookModel, deleteBook: any }
                 </div>
                 <div className='mt-3 col-md-4'>
                     <div className='d-flex justify-content-center algin-items-center'>
-                        <p>Total Quantity: <b>{quantity}</b></p>
+                        <p>Tổng số lượng: <b>{quantity}</b></p>
                     </div>
                     <div className='d-flex justify-content-center align-items-center'>
-                        <p>Books Remaining: <b>{remaining}</b></p>
+                        <p>Sách còn lại: <b>{remaining}</b></p>
                     </div>
                 </div>
                 <div className='mt-3 col-md-1'>
                     <div className='d-flex justify-content-start'>
-                        <button className='m-1 btn btn-md btn-danger' onClick={deleteBook}>Delete</button>
+                        <button className='m-1 btn btn-md btn-danger' onClick={deleteBook}>Xóa bỏ</button>
                     </div>
                 </div>
-                <button className='m1 btn btn-md main-color text-white' onClick={increaseQuantity}>Add Quantity</button>
-                <button className='m1 btn btn-md btn-warning' onClick={decreaseQuantity}>Decrease Quantity</button>
+                <button className='m1 btn btn-md main-color text-white' onClick={increaseQuantity}>Thêm số lượng</button>
+                <button className='m1 btn btn-md btn-warning' onClick={decreaseQuantity}>Giảm số lượng</button>
             </div>
         </div>
     );

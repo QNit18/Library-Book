@@ -66,7 +66,7 @@ export const Messages = () => {
         <div className='mt-2'>
             {messages.length > 0 ? 
                 <>
-                    <h5>Current Q/A: </h5>
+                    <h5>Hỏi đáp hiện tại: </h5>
                     {messages.map(message => (
                         <div key={message.id}>
                             <div className='card mt-2 shadow p-3 bg-body rounded'>
@@ -75,14 +75,14 @@ export const Messages = () => {
                                 <p>{message.question}</p>
                                 <hr/>
                                 <div>
-                                    <h5>Response: </h5>
+                                    <h5>Phản hồi: </h5>
                                     {message.response && message.adminEmail ? 
                                         <>
                                             <h6>{message.adminEmail} (admin)</h6>
                                             <p>{message.response}</p>
                                         </>
                                         :
-                                        <p><i>Pending response from administration. Please be patient.</i></p>
+                                        <p><i>Đang chờ phản hồi từ Admin. Làm ơn hãy kiên nhẫn.</i></p>
                                     }
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ export const Messages = () => {
                     ))}
                 </>
                 :
-                <h5>All questions you submit will be shown here</h5>
+                <h5>Tất cả các câu hỏi bạn gửi sẽ được hiển thị ở đây</h5>
             }
             {totalPages > 1 && <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate}/>}
         </div>

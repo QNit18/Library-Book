@@ -31,36 +31,36 @@ export const Navbar = () => {
         <div className='collapse navbar-collapse' id='navbarNavDropdown'>
           <ul className='navbar-nav'>
             <li className='nav-item'>
-              <NavLink className='nav-link' to='/home'>Home</NavLink>
+              <NavLink className='nav-link' to='/home'>Trang chủ</NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink className='nav-link' to='/search'>Search Books</NavLink>
+              <NavLink className='nav-link' to='/search'>Tìm kiếm sách</NavLink>
             </li>
             {authState.isAuthenticated && (
               <>
                 <li className='nav-item'>
-                  <NavLink className='nav-link' to='/shelf'>Shelf</NavLink>
+                  <NavLink className='nav-link' to='/shelf'>Kệ sách</NavLink>
                 </li>
                 <li className='nav-item'>
-                  <NavLink className='nav-link' to='/messages'>Messages</NavLink>
+                  <NavLink className='nav-link' to='/messages'>Tin nhắn</NavLink>
                 </li>
               </>
             )}
 
             {authState.isAuthenticated && authState.accessToken?.claims?.userType === 'admin' &&
               <li className='nav-item'>
-                <NavLink className='nav-link' to='/admin'>Admin</NavLink>
+                <NavLink className='nav-link' to='/admin'>Quản trị viên</NavLink>
               </li>
             }
           </ul>
           <ul className='navbar-nav ms-auto'>
             {!authState.isAuthenticated ?
               <li className='nav-item m-1'>
-                <Link type='button' className='btn btn-outline-light' to='/login'>Sign in</Link>
+                <Link type='button' className='btn btn-outline-light' to='/login'>Đăng nhập</Link>
               </li>
               :
               <li>
-                <button className='btn btn-outline-light' onClick={handleLogout}>Logout</button>
+                <button className='btn btn-outline-light' onClick={handleLogout}>Đăng xuất</button>
               </li>
             }
           </ul>

@@ -96,13 +96,13 @@ export const AdminMessages = () => {
         <div className='mt-3'>
             {messages.length > 0 ? 
                 <>
-                    <h5>Pending Q/A: </h5>
+                    <h5>Hỏi/Đáp đang chờ xử lý: </h5>
                     {messages.map(message => (
                         <AdminMessage message={message} key={message.id} submitResponseToQuestion={submitResponseToQuestion}/>
                     ))}
                 </>
                 :
-                <h5>No pending Q/A</h5>
+                <h5>Không có câu hỏi/trả lời nào đang chờ xử lý</h5>
             }
             {totalPages > 1 && <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate}/>}
         </div>

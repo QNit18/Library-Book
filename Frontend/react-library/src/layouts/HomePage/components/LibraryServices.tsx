@@ -10,20 +10,20 @@ export const LibraryServices = () => {
             <div className='row p-4 align-items-center border shadow-lg'>
                 <div className='col-lg-7 p-3'>
                     <h1 className='display-4 fw-bold'>
-                        Can't find what you are looking for?
+                        Không thể tìm thấy những gì bạn đang tìm kiếm?
                     </h1>
                     <p className='lead'>
-                        If you cannot find what you are looking for, 
-                        send our library admin's a personal message!
+                        Nếu bạn không thể tìm thấy những gì bạn đang tìm kiếm, 
+                        hãy gửi tin nhắn cá nhân cho quản trị viên thư viện của chúng tôi!
                     </p>
                     <div className='d-grid gap-2 justify-content-md-start mb-4 mb-lg-3'>
                         {authState?.isAuthenticated ? 
-                        <Link to='/messages' type='button' className='btn main-color btn-lg px-4 me-md-2 fw-bold text-white'>
-                            Library Services
+                        <Link to='/messages' type='button' className='btn main-color btn-lg text-white'>
+                            Dịch vụ thư viện
                         </Link>   
                         :
                         <Link className='btn main-color btn-lg text-white' to='/login'>
-                            Sign up
+                            Đăng nhập
                         </Link> 
                     }
 

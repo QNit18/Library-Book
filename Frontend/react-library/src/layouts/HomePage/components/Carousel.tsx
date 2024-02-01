@@ -67,7 +67,7 @@ export const Carousel = () => {
     return (
         <div className='container mt-5' style={{ height: 550 }}>
             <div className='homepage-carousel-title'>
-                <h3>Find your next "I stayed up too late reading" book.</h3>
+                <h3>Tìm cuốn sách tiếp theo "Tôi đã thức quá khuya để đọc"</h3>
             </div>
             <div id='carouselExampleControls' className='carousel carousel-dark slide mt-5 
                 d-none d-lg-block' data-bs-interval='false'>
@@ -115,7 +115,7 @@ export const Carousel = () => {
                 </div>
             </div>
             <div className='homepage-carousel-title mt-3'>
-                <Link className='btn btn-outline-secondary btn-lg' to='/search'>View More</Link>
+                <Link className='btn btn-outline-secondary btn-lg' to='/search'>Xem thêm</Link>
             </div>
         </div>
     );
