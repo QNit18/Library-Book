@@ -14,12 +14,12 @@ export const MessagesPage = () => {
                         <button onClick={() => setMessagesClick(false)} className='nav-link active' 
                             id='nav-send-message-tab' data-bs-toggle='tab' data-bs-target='#nav-send-message' 
                             type='button' role='tab' aria-controls='nav-send-message' aria-selected='true'>
-                                Submit Question
+                                Gửi câu hỏi
                         </button>
                         <button onClick={() => setMessagesClick(true)} className='nav-link' 
                             id='nav-message-tab' data-bs-toggle='tab' data-bs-target='#nav-message' 
                             type='button' role='tab' aria-controls='nav-message' aria-selected='false'>
-                                Q/A Response/Pending
+                                Phản hồi hỏi đáp / Chưa giải quyết
                         </button>
                     </div>
                 </nav>

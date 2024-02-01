@@ -10,7 +10,7 @@ export const LoansModal: React.FC<{ shelfCurrentLoan: ShelfCurrentLoans, mobile:
                     <div className='modal-content'>
                         <div className='modal-header'>
                             <h5 className='modal-title' id='staticBackdropLabel'>
-                                Loan Options
+                                Tùy chọn
                             </h5>
                             <button type='button' className='btn-close' data-bs-dismiss='modal' aria-label='Close'>
                             </button>
@@ -36,24 +36,24 @@ export const LoansModal: React.FC<{ shelfCurrentLoan: ShelfCurrentLoans, mobile:
                                     <hr/>
                                     {props.shelfCurrentLoan.daysLeft > 0 && 
                                         <p className='text-secondary'>
-                                            Due in {props.shelfCurrentLoan.daysLeft} days.
+                                            Hạn chót trong {props.shelfCurrentLoan.daysLeft} ngày.
                                         </p>
                                     }
                                     {props.shelfCurrentLoan.daysLeft === 0 && 
                                         <p className='text-success'>
-                                             Due Today.
+                                             Hạn chót hôm nay.
                                         </p>
                                     }
                                     {props.shelfCurrentLoan.daysLeft < 0 && 
                                         <p className='text-danger'>
-                                            Past due by {props.shelfCurrentLoan.daysLeft} days.
+                                            Quá hạn {props.shelfCurrentLoan.daysLeft} ngày.
                                         </p>
                                     }
                                     <div className='list-group mt-3'>
                                         <button onClick={() => props.returnBook(props.shelfCurrentLoan.book.id)} 
                                            data-bs-dismiss='modal' className='list-group-item list-group-item-action' 
                                            aria-current='true'>
-                                            Return Book
+                                            Trả sách
                                         </button>
                                         <button onClick={
                                             props.shelfCurrentLoan.daysLeft < 0 ? 
@@ -68,7 +68,7 @@ export const LoansModal: React.FC<{ shelfCurrentLoan: ShelfCurrentLoans, mobile:
                                                 'list-group-item list-group-item-action'
                                             }>
                                             {props.shelfCurrentLoan.daysLeft < 0 ? 
-                                            'Late dues cannot be renewed' : 'Renew loan for 7 days'    
+                                            'Trễ hạn không thể được gia hạn' : 'Gia hạn khoản vay trong 7 ngày'    
                                             }
                                         </button>
                                     </div>
@@ -77,7 +77,7 @@ export const LoansModal: React.FC<{ shelfCurrentLoan: ShelfCurrentLoans, mobile:
                         </div>
                         <div className='modal-footer'>
                             <button type='button' className='btn btn-secondary' data-bs-dismiss='modal'>
-                                Close
+                                Đóng
                             </button>
                         </div>
                     </div>

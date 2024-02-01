@@ -24,21 +24,21 @@ export const AdminMessage: React.FC<{ message: MessageModel,
                 <p>{props.message.question}</p>
                 <hr/>
                 <div>
-                    <h5>Response: </h5>
+                    <h5>Phản hồi: </h5>
                     <form action="PUT">
                         {displayWarning && 
                             <div className='alert alert-danger' role='alert'>
-                                All fields must be filled out.
+                                Tất cả các trường phải được điền vào.
                             </div>
                         }
                         <div className='col-md-12 mb-3'>
-                            <label className='form-label'> Description </label>
+                            <label className='form-label'> Mô tả </label>
                             <textarea className='form-control' id='exampleFormControlTextarea1' rows={3} 
                                 onChange={e => setResponse(e.target.value)} value={response}></textarea>
                         </div>
                         <div>
                             <button type='button' className='btn btn-primary mt-3' onClick={submitBtn}>
-                                Submit Response
+                                Gửi phản hồi
                             </button>
                         </div>
                     </form>

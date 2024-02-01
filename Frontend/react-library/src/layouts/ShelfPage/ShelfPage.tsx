@@ -14,12 +14,12 @@ export const ShelfPage = () => {
                         <button onClick={() => setHistoryClick(false)} className='nav-link active' id='nav-loans-tab' data-bs-toggle='tab'
                             data-bs-target='#nav-loans' type='button' role='tab' aria-controls='nav-loans'
                             aria-selected='true'>
-                                Loans
+                                Sách đang mượn
                         </button>
                         <button onClick={() => setHistoryClick(true)} className='nav-link' id='nav-history-tab' data-bs-toggle='tab' 
                             data-bs-target='#nav-history' type='button' role='tab' aria-controls='nav-history'
                             aria-selected='false'>
-                                Your History
+                                Lịch sử mượn sách
                         </button>
                     </div>
                 </nav>

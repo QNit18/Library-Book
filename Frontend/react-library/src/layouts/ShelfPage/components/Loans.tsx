@@ -97,7 +97,7 @@ export const Loans = () => {
             <div className='d-none d-lg-block mt-2'>
                 {shelfCurrentLoans.length > 0 ? 
                 <>
-                    <h5>Current Loans: </h5>
+                    <h5>Những sách đang mượn: </h5>
 
                     {shelfCurrentLoans.map(shelfCurrentLoan => (
                         <div key={shelfCurrentLoan.book.id}>
@@ -113,10 +113,10 @@ export const Loans = () => {
                                 <div className='card col-3 col-md-3 container d-flex'>
                                     <div className='card-body'>
                                         <div className='mt-3'>
-                                            <h4>Loan Options</h4>
+                                            <h4>Tùy chọn</h4>
                                             {shelfCurrentLoan.daysLeft > 0 && 
                                                 <p className='text-secondary'>
-                                                    Due in {shelfCurrentLoan.daysLeft} days.
+                                                    Hạn chót trong {shelfCurrentLoan.daysLeft} ngày.
                                                 </p>
                                             }
                                             {shelfCurrentLoan.daysLeft === 0 && 
@@ -133,19 +133,19 @@ export const Loans = () => {
                                                 <button className='list-group-item list-group-item-action' 
                                                     aria-current='true' data-bs-toggle='modal' 
                                                     data-bs-target={`#modal${shelfCurrentLoan.book.id}`}>
-                                                        Manage Loan
+                                                        Quản lí sách mượn
                                                 </button>
                                                 <Link to={'search'} className='list-group-item list-group-item-action'>
-                                                    Search more books?
+                                                    Tìm kiếm thêm sách?
                                                 </Link>
                                             </div>
                                         </div>
                                         <hr/>
                                         <p className='mt-3'>
-                                            Help other find their adventure by reviewing your loan.
+                                            Giúp người khác tìm thấy cuộc phiêu lưu của họ bằng cách để lại đánh giá của bạn.
                                         </p>
                                         <Link className='btn btn-primary' to={`/checkout/${shelfCurrentLoan.book.id}`}>
-                                            Leave a review
+                                            Để lại đánh giá
                                         </Link>
                                     </div>
                                 </div>
@@ -158,10 +158,10 @@ export const Loans = () => {
                 </> :
                 <>
                     <h3 className='mt-3'>
-                        Currently no loans
+                        Hiện tại bạn chưa mượn cuốn sách nào
                     </h3>
                     <Link className='btn btn-primary' to={`search`}>
-                        Search for a new book
+                        Tìm kiếm một cuốn sách mới
                     </Link>
                 </>
             }

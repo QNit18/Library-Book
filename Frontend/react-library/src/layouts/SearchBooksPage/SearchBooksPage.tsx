@@ -15,7 +15,7 @@ export const SearchBooksPage = () => {
     const [totalPages, setTotalPages] = useState(0);
     const [search, setSearch] = useState('');
     const [searchUrl, setSearchUrl] = useState('');
-    const [categorySelection, setCategorySelection] = useState('Book category');
+    const [categorySelection, setCategorySelection] = useState('Thể loại sách');
 
     useEffect(() => {
         const fetchBooks = async () => {
@@ -89,7 +89,7 @@ export const SearchBooksPage = () => {
         } else {
             setSearchUrl(`/search/findByTitleContaining?title=${search}&page=<pageNumber>&size=${booksPerPage}`)
         }
-        setCategorySelection('Book category')
+        setCategorySelection('Thể loại sách')
     }
 
     const categoryField = (value: string) => {
@@ -123,11 +123,11 @@ export const SearchBooksPage = () => {
                         <div className='col-6'>
                             <div className='d-flex'>
                                 <input className='form-control me-2' type='search'
-                                    placeholder='Search' aria-labelledby='Search'
+                                    placeholder='Nhập tên sách muốn tìm kiếm...' aria-labelledby='Search'
                                     onChange={e => setSearch(e.target.value)} />
                                 <button className='btn btn-outline-success'
                                     onClick={() => searchHandleChange()}>
-                                    Search
+                                    Tìm
                                 </button>
                             </div>
                         </div>
@@ -141,7 +141,7 @@ export const SearchBooksPage = () => {
                                 <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
                                     <li onClick={() => categoryField('All')}>
                                         <a className='dropdown-item' href='#'>
-                                            All
+                                            Tất cả
                                         </a>
                                     </li>
                                     <li onClick={() => categoryField('FE')}>
@@ -171,10 +171,10 @@ export const SearchBooksPage = () => {
                     {totalAmountOfBooks > 0 ?
                         <>
                             <div className='mt-3'>
-                                <h5>Number of results: ({totalAmountOfBooks})</h5>
+                                <h5>Số kết quả: ({totalAmountOfBooks})</h5>
                             </div>
                             <p>
-                                {indexOfFirstBook + 1} to {lastItem} of {totalAmountOfBooks} items:
+                                {indexOfFirstBook + 1} đến {lastItem} trong {totalAmountOfBooks} mục:
                             </p>
                             {books.map(book => (
                                 <SearchBook book={book} key={book.id} />
@@ -183,10 +183,10 @@ export const SearchBooksPage = () => {
                         :
                         <div className='m-5'>
                             <h3>
-                                Can't find what you are looking for?
+                                Không thể tìm thấy những gì bạn đang tìm kiếm?
                             </h3>
-                            <a type='button' className='btn main-color btn-md px-4 me-md-2 fw-bold text-white'
-                                href='#'>Library Services</a>
+                            <a type='button' className='btn main-color btn-md px-4 me-md-2 text-white'
+                                href='#'>Dịch vụ thư viện</a>
                         </div>
                     }
                     {totalPages > 1 &&

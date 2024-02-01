@@ -66,7 +66,7 @@ export const HistoryPage = () => {
         <div className='mt-2'>
             {histories.length > 0 ? 
             <>
-                <h5>Recent History:</h5>
+                <h5>Lịch sử gần đây:</h5>
 
                 {histories.map(history => (
                     <div key={history.id}>
@@ -96,8 +96,8 @@ export const HistoryPage = () => {
                                             <h4>{history.title}</h4>
                                             <p className='card-text'>{history.description}</p>
                                             <hr/>
-                                            <p className='card-text'> Checked out on: {history.checkoutDate}</p>
-                                            <p className='card-text'> Returned on: {history.returnedDate}</p>
+                                            <p className='card-text'> Checked out vào ngày: {history.checkoutDate}</p>
+                                            <p className='card-text'> Đã trả lại vào ngày: {history.returnedDate}</p>
                                         </div>
                                 </div>
                             </div>
@@ -108,9 +108,9 @@ export const HistoryPage = () => {
             </>
             :
             <>
-                <h3 className='mt-3'>Currently no history: </h3>
+                <h3 className='mt-3'>Hiện tại không có lịch sử: </h3>
                 <Link className='btn btn-primary' to={'search'}>
-                    Search for new book
+                    Tìm kiếm sách mới
                 </Link>
             </>
         }
