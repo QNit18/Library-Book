@@ -12,7 +12,7 @@ export const Carousel = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = "http://localhost:8080/api/books";
+            const baseUrl: string = "https://library-book-production.up.railway.app//api/books";
 
             const url: string = `${baseUrl}?page=0&size=9`;
 
