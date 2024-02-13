@@ -19,7 +19,7 @@ export const ChangeQuantityOfBooks = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = `https://library-book-production.up.railway.app//api/books?page=${currentPage - 1}&size=${booksPerPage}`;
+            const baseUrl: string = `https://library-book-production.up.railway.app/api/books?page=${currentPage - 1}&size=${booksPerPage}`;
 
             const response = await fetch(baseUrl);
 

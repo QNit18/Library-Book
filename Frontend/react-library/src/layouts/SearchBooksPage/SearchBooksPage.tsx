@@ -19,7 +19,7 @@ export const SearchBooksPage = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = "https://library-book-production.up.railway.app//api/books";
+            const baseUrl: string = "https://library-book-production.up.railway.app/api/books";
 
             let url: string = '';
 
