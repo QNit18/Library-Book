@@ -28,7 +28,7 @@ export const AdminMessages = () => {
     useEffect(() => {
         const fetchUserMessages = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `https://library-book-production.up.railway.app/api/messages/search/findByClosed/?closed=false&page=${currentPage - 1}&size=${messagesPerPage}`;
+                const url = `http://localhost:8080/api/messages/search/findByClosed/?closed=false&page=${currentPage - 1}&size=${messagesPerPage}`;
                 const requestOptions = {
                     method: 'GET',
                     headers: {
@@ -70,7 +70,7 @@ export const AdminMessages = () => {
 
 
     async function submitResponseToQuestion(id: number, response: string) {
-        const url = `https://library-book-production.up.railway.app/api/messages/secure/admin/message`;
+        const url = `http://localhost:8080/api/messages/secure/admin/message`;
         if (authState && authState?.isAuthenticated && id !== null && response !== '') {
             const messageAdminRequestModel: AdminMessageRequest = new AdminMessageRequest(id, response);
             const requestOptions = {
